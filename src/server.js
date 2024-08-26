@@ -9,6 +9,8 @@ const server = express();
 server.use(cors());
 server.use(bodyParser.urlencoded({extended: false}));
 
+server.use('/api', routes);
+
 server.listen(process.env.PORT, () => {
     console.log(`Servidor rodando em: http://127.0.0.1:${process.env.PORT}`);
 });
